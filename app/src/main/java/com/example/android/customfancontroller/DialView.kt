@@ -99,7 +99,6 @@ class DialView @JvmOverloads constructor(
     }
 
     private fun PointF.computeXYForSpeed(pos: FanSpeed, radius: Float) {
-        // Angles are in radians.
         val startAngle = Math.PI * (9 / 8.0)
         val angle = startAngle + pos.ordinal * (Math.PI / 4)
         x = (radius * cos(angle)).toFloat() + width / 2
