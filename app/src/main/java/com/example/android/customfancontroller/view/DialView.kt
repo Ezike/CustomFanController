@@ -1,10 +1,11 @@
-package com.example.android.customfancontroller
+package com.example.android.customfancontroller.view
 
 import android.content.Context
 import android.graphics.*
 import android.util.AttributeSet
 import android.view.View
 import androidx.core.content.withStyledAttributes
+import com.example.android.customfancontroller.R
 import kotlin.math.cos
 import kotlin.math.min
 import kotlin.math.sin
@@ -33,7 +34,8 @@ class DialView @JvmOverloads constructor(
 ) : View(context, attrs, defStyleAttr) {
 
     private var radius = 0.0f                   // Radius of the circle.
-    private var fanSpeed = FanSpeed.OFF         // The active selection.
+    private var fanSpeed =
+        FanSpeed.OFF         // The active selection.
     // position variable which will be used to draw label and indicator circle position
     private val pointPosition: PointF = PointF(0.0f, 0.0f)
 
@@ -50,7 +52,9 @@ class DialView @JvmOverloads constructor(
 
     init {
         isClickable = true
-        context.withStyledAttributes(attrs, R.styleable.DialView) {
+        context.withStyledAttributes(attrs,
+            R.styleable.DialView
+        ) {
             fanSpeedLowColor = getColor(R.styleable.DialView_fanColor1, Color.GREEN)
             fanSpeedMediumColor = getColor(R.styleable.DialView_fanColor2, Color.GREEN)
             fanSeedMaxColor = getColor(R.styleable.DialView_fanColor3, Color.GREEN)

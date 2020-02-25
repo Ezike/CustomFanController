@@ -6,4 +6,7 @@
     <string name="fan_medium">2</string>
     <string name="fan_high">3</string>
     <string name="free_drawing">Free drawing</string>
+
+    <string name="canvasContentDescription">Mini Paint is a simple line drawing app.
+   Drag your fingers to draw. Rotate the phone to clear.</string>
 </resources>
