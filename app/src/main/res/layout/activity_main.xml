@@ -36,6 +36,18 @@
         app:layout_constraintTop_toBottomOf="@+id/customViewLabel" />
 
     <Button
+        android:id="@+id/clipping"
+        style="@style/TextAppearance.AppCompat.Widget.Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:backgroundTint="@color/colorBackground"
+        android:text="@string/clipping"
+        app:layout_constraintBottom_toTopOf="@id/free_drawing"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
         android:id="@+id/free_drawing"
         style="@style/TextAppearance.AppCompat.Widget.Button"
         android:layout_width="0dp"

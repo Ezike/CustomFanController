@@ -1,7 +1,10 @@
 package com.example.android.customfancontroller.view
 
 import android.content.Context
-import android.graphics.*
+import android.graphics.Canvas
+import android.graphics.Paint
+import android.graphics.Path
+import android.graphics.Rect
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewConfiguration
@@ -31,9 +34,9 @@ class MyCanvasView(context: Context) : View(context) {
     private lateinit var frame: Rect
 
     private val backgroundColor: Int =
-        ResourcesCompat.getColor(resources, R.color.colorBackground, null)
+            ResourcesCompat.getColor(resources, R.color.colorBackground, null)
     private val drawColor: Int =
-        ResourcesCompat.getColor(resources, R.color.colorPaint, null)
+            ResourcesCompat.getColor(resources, R.color.colorPaint, null)
 
     // Set up the paint with which to draw.
     private val paint: Paint = Paint().apply {
@@ -91,10 +94,10 @@ class MyCanvasView(context: Context) : View(context) {
             // QuadTo() adds a quadratic bezier from the last point,
             // approaching control point (x1,y1), and ending at (x2,y2).
             path.quadTo(
-                currentX,
-                currentY,
-                (motionTouchEventX + currentX) / 2,
-                (motionTouchEventY + currentY) / 2
+                    currentX,
+                    currentY,
+                    (motionTouchEventX + currentX) / 2,
+                    (motionTouchEventY + currentY) / 2
             )
             currentX = motionTouchEventX
             currentY = motionTouchEventY

@@ -12,12 +12,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         findViewById<Button>(R.id.free_drawing).setOnClickListener {
-            gotoDrawScreen()
+            gotoScreen(CanvasActivity())
+        }
+
+        findViewById<Button>(R.id.clipping).setOnClickListener {
+            gotoScreen(ClippingActivity())
         }
     }
 
-    private fun gotoDrawScreen() {
-        val intent = Intent(this, CanvasActivity::class.java)
+    private fun gotoScreen(screen: AppCompatActivity) {
+        val intent = Intent(this, screen::class.java)
         startActivity(intent)
     }
 }
